@@ -17,7 +17,7 @@
         return rainyjacket;
       } catch (error) {
         
-        alert("That was error, while try to fetch",error);
+        alert("That was error, while try to fetch");
       }
      
     
