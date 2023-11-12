@@ -29,6 +29,9 @@ function renderRaincoat(jacketData) {
   <img src="${jacketData.image}" alt="Raincho_Unisex_Raincoat">
   <h4 class="ftr-prdt-name">${jacketData.title}</h4>
   <p >NOK ${jacketData.price}</p>
+  
+  /* here is productdetail.html?id, but .html is not working on live site,so i removed here .html */
+  
   <a href="productdetail?id=${jacketData.id}" class="btn-yellow cart">ADD TO CART</a>
  </div>`
 }
