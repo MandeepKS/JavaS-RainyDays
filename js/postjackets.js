@@ -45,7 +45,12 @@ function renderRaincoat(jacketData) {
     with the help of forEach loop.
    ------------------------------------------------- */
 export async function renderRaincoats(listOfjackets) {
-  listOfjackets.forEach(renderRaincoat);
+  try {
+       listOfjackets.forEach(renderRaincoat);
+  } catch (error) {
+     alert("Rendering issue...", error);
+  }
+ 
  }
 
 
