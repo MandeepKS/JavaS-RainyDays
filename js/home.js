@@ -48,7 +48,7 @@
                renderRaincoat(listOfjackets[i]);
      }
        } catch (error) {
-          alert(error);
+          alert("Error : " + error);
        }
        
   }
