@@ -15,13 +15,13 @@ import {apiUrl} from "./apiconnection.js";
       const response = await fetch(apiUrl);
       const rainyjackets = await response.json();
       
-      return rainyjackets;
+      
     } catch (error) {
       
       alert("There was error , while fetching the data", error);
     }
    
-   
+    return rainyjackets;
 }
 
  /* ---------------------------------------
