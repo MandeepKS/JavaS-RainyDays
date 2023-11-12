@@ -17,6 +17,9 @@
      if(!response.ok){
      alert("Error: Bad connection,Jackets data are not fetching.");   
     }
+   
+     const html_loader = document.getElementById("loading");
+     html_loader.remove();
      return rainyjackets;
     
  }
@@ -28,9 +31,6 @@
  function renderRaincoat(jacketData) {
   
   const jacketElements = document.querySelector(".container-3");
-   const html_loader = document.getElementById("loading");
-   html_loader.remove();
-   
   jacketElements.innerHTML += `<div class="feature-products-card">
    <img src="${jacketData.image}" alt="Raincho_Unisex_Raincoat">
    <h4 class="ftr-prdt-name">${jacketData.title}</h4>
