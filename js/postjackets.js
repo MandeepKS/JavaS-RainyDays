@@ -15,7 +15,7 @@ import {apiUrl} from "./apiconnection.js";
     const rainyjackets = await response.json();
     if (!response.ok) 
     {
-      alert("Bad connection from server.");  
+      alert("Bad connection,Jackets data are not fetching.");  
     }
     return rainyjackets;
    
