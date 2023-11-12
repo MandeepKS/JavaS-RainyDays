@@ -15,7 +15,7 @@ import {apiUrl} from "./apiconnection.js";
     const rainyjackets = await response.json();
     if (!response.ok) 
     {
-      alert("Error: Bad connection,Jackets data are not fetching.");  
+      throw new Error("Error: Bad connection,Jackets data are not fetching.");  
     }
     return rainyjackets;
    
@@ -48,7 +48,7 @@ export async function renderRaincoats(listOfjackets) {
   try {
        listOfjackets.forEach(renderRaincoat);
   } catch (error) {
-     alert("Rendering issue..." + error);
+     alert(error);
   }
  
  }
