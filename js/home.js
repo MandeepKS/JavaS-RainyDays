@@ -15,7 +15,7 @@
      const rainyjackets = await response.json();
      
      if(!response.ok){
-      throw new Error("Error: Bad connection,Jackets data are not fetching.");   
+     alert("Error: Bad connection,Jackets data are not fetching.");   
     }
      return rainyjackets;
     
@@ -46,7 +46,7 @@
        try {
            for(let i= 0; i<3; i++){
                renderRaincoat(listOfjackets[i]);
-     }
+            }
        } catch (error) {
           alert("Error : " + error);
        }
