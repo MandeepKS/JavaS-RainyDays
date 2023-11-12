@@ -14,13 +14,13 @@
       try {
         const response = await fetch(apiUrl + id);
         const rainyjacket = await response.json();
-        return rainyjacket;
+        
       } catch (error) {
         
         alert("That was error, while try to fetch");
       }
      
-    
+      return rainyjacket;
  }
 
   /* ---------------------------------------
