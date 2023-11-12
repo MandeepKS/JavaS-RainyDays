@@ -17,7 +17,9 @@
      if(!response.ok){
      alert("Error: Bad connection,Jackets data are not fetching.");   
     }
-   
+     
+    /* while fetching the data from api, we are removing loading h1 element from 
+       index page */
      const html_loader = document.getElementById("loading");
      html_loader.remove();
      return rainyjackets;

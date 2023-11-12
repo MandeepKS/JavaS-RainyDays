@@ -17,6 +17,11 @@ import {apiUrl} from "./apiconnection.js";
     {
       alert("Error: Bad connection,Jackets data are not fetching.");  
     }
+
+     /* while fetching the data from api, we are removing loading h1 element from 
+       collection page */
+       const html_loader = document.getElementById("loading");
+       html_loader.remove();
     return rainyjackets;
    
 }

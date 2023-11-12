@@ -18,6 +18,11 @@
         if(!response.ok){
           alert("Error: Bad connection, Jacket id is not fetching the data.");  
         }
+
+         /* while fetching the data from api, we are removing loading h1 element from 
+       productdetail page */
+       const html_loader = document.getElementById("loading");
+       html_loader.remove();
         return rainyjacket;
  }
 
