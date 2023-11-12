@@ -48,7 +48,7 @@ export async function renderRaincoats(listOfjackets) {
   try {
        listOfjackets.forEach(renderRaincoat);
   } catch (error) {
-     alert("Rendering issue...", error);
+     alert("Rendering issue..." + error);
   }
  
  }
