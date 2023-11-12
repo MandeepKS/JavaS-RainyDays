@@ -10,11 +10,17 @@ import {apiUrl} from "./apiconnection.js";
    from  Api
    -------------------------------*/
    export async function getRaincoats() {
-
-    const response = await fetch(apiUrl);
-    const rainyjackets = await response.json();
-    
-    return rainyjackets;
+     
+    try {
+      const response = await fetch(apiUrl);
+      const rainyjackets = await response.json();
+      
+      return rainyjackets;
+    } catch (error) {
+      
+      alert("There was error , while fetching the data", error);
+    }
+   
    
 }
 
