@@ -11,17 +11,14 @@ import {apiUrl} from "./apiconnection.js";
    -------------------------------*/
    export async function getRaincoats() {
      
-    try {
-      const response = await fetch(apiUrl);
-      const rainyjackets = await response.json();
-      
-      
-    } catch (error) {
-      
-      alert("There was error , while fetching the data", error);
+    const response = await fetch(apiUrl);
+    const rainyjackets = await response.json();
+    if (!response.ok) 
+    {
+      alert("Bad connection from server.");  
     }
-   
     return rainyjackets;
+   
 }
 
  /* ---------------------------------------
