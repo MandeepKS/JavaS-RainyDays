@@ -3,19 +3,19 @@ import { jacketPage } from "./postjacket.js";
 import { jacketscollectionPage } from "./postjackets.js";
 
 
-if(location.pathname === "/index.html")
+if(location.pathname === "/index")
 {
   jacketscollectionHomePage();
 }
 
-if(location.pathname === "/collection.html")
+if(location.pathname === "/collection")
 {
   jacketscollectionPage();
 
 }
 
 
-if(location.pathname === "/productdetail.html")
+if(location.pathname === "/productdetail")
 {
 
   jacketPage();
