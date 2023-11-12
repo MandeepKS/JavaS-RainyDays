@@ -29,7 +29,7 @@ function renderRaincoat(jacketData) {
   <img src="${jacketData.image}" alt="Raincho_Unisex_Raincoat">
   <h4 class="ftr-prdt-name">${jacketData.title}</h4>
   <p >NOK ${jacketData.price}</p>
-  <a href="productdetail/?id=${jacketData.id}" class="btn-yellow cart">ADD TO CART</a>
+  <a href="productdetail?id=${jacketData.id}" class="btn-yellow cart">ADD TO CART</a>
  </div>`
 }
 

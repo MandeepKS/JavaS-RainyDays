@@ -18,7 +18,7 @@ if(location.pathname === "/collection")
 }
 
 
-if(location.pathname === "/productdetail/")
+if(location.pathname === "/productdetail")
 {
 
   jacketPage();
