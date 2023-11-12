@@ -2,8 +2,9 @@ import { jacketscollectionHomePage } from "./home.js";
 import { jacketPage } from "./postjacket.js";
 import { jacketscollectionPage } from "./postjackets.js";
 
-
-if(location.pathname === "/index")
+/* for local, /index.html, /collection.html, /productdetail.html are working
+   but for live environment i have to remove .html */
+if(location.pathname === "/")
 {
   jacketscollectionHomePage();
 }
