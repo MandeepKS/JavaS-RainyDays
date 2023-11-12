@@ -11,16 +11,14 @@
     -------------------------------*/
     export async function getRaincoat(id) {
       
-      try {
+    
         const response = await fetch(apiUrl + id);
         const rainyjacket = await response.json();
         
-      } catch (error) {
-        
-        alert("That was error, while try to fetch");
-      }
-     
-      return rainyjacket;
+        if(!response.ok){
+          alert("Error: Bad connection, Jacket id is not fetching the data.");  
+        }
+        return rainyjacket;
  }
 
   /* ---------------------------------------
@@ -56,11 +54,17 @@
 
  export async function jacketPage(){
     //make new url objects from web address-bar
-    const url = new URL(location.href);
-    const id = url.searchParams.get("id");
-    
-    const single_jacket = await getRaincoat(id);
-    renderRaincoat(single_jacket);
+
+    try {
+      const url = new URL(location.href);
+      const id = url.searchParams.get("id");
+      const single_jacket = await getRaincoat(id);
+      renderRaincoat(single_jacket);
+    } catch (error) {
+      
+      alert("Error : "  + error);
+    }
+   
     
   }
 
