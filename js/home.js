@@ -14,6 +14,9 @@
      const response = await fetch(apiUrl);
      const rainyjackets = await response.json();
      
+     if(!response.ok){
+      alert("Error: Bad connection,Jackets data are not fetching.");   
+    }
      return rainyjackets;
     
  }
@@ -40,9 +43,14 @@
      with the help of forEach loop.
     ------------------------------------------------- */
  export async function renderRaincoats(listOfjackets) {
-        for(let i= 0; i<3; i++){
-             renderRaincoat(listOfjackets[i]);
-        }
+       try {
+           for(let i= 0; i<3; i++){
+               renderRaincoat(listOfjackets[i]);
+     }
+       } catch (error) {
+          alert(error);
+       }
+       
   }
  
  
