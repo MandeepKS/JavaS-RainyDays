@@ -29,6 +29,7 @@
   
   const jacketElements = document.querySelector(".container-3");
    jacketElements.innerHTML += `<div class="feature-products-card">
+   <h1></h1>
    <img src="${jacketData.image}" alt="Raincho_Unisex_Raincoat">
    <h4 class="ftr-prdt-name">${jacketData.title}</h4>
    <p >NOK ${jacketData.price}</p>
